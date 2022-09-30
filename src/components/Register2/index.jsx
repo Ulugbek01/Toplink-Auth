@@ -12,7 +12,7 @@ const Register2 = () => {
   const passwordRef = useRef('') 
 
   const { mutate } = useMutation(() => {
-    return fetch('http://207.154.246.125:8888/register', {
+    return fetch('https://207.154.246.125:8888/register', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',

@@ -9,7 +9,7 @@ const VerificationCode = () => {
     const verificationCodeRef = useRef('');
 
     const {mutate} = useMutation(() => {
-            return fetch('http://207.154.246.125:8888/verificationcode', {
+            return fetch('https://207.154.246.125:8888/verificationcode', {
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json',

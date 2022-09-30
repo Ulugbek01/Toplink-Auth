@@ -10,7 +10,7 @@ const NewPassword = () => {
     const newPasswordRef = useRef('');
 
     const {mutate} = useMutation(() => {
-            return fetch('http://207.154.246.125:8888/newpassword', {
+            return fetch('https://207.154.246.125:8888/newpassword', {
                 method: 'PUT',
                 headers: {
                     'Content-type': 'application/json',

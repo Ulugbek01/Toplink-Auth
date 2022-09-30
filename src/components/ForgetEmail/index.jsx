@@ -9,7 +9,7 @@ const ForgetEmail = () => {
     const navigate = useNavigate();
 
     const {mutate} = useMutation(() => {
-            return fetch('http://207.154.246.125:8888/checkemail', {
+            return fetch('https://207.154.246.125:8888/checkemail', {
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json',
