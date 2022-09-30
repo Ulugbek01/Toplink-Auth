@@ -12,7 +12,7 @@ const Login = () => {
   const navigate = useNavigate();
   
   const { mutate } = useMutation(() => {
-    return fetch('http://207.154.246.125:8888/login', {
+    return fetch('https://207.154.246.125:8888/login', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
