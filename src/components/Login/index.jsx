@@ -12,7 +12,7 @@ const Login = () => {
   const navigate = useNavigate();
   
   const { mutate } = useMutation(() => {
-    return fetch('https://207.154.246.125:8888/login', {
+    return fetch('http://207.154.246.125:8888/login', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
@@ -35,7 +35,7 @@ const Login = () => {
             passwordRef.current.value = ''
           }
           else {
-            setError(res.message);
+            setError('email yoki parol xato');
           }
         },
       })
@@ -54,7 +54,7 @@ const Login = () => {
         <p className='label-text mt-3'>Parol</p>
         <input ref={passwordRef} onFocus={() => setError('')} className='form-control' type={'password'} placeholder={'**********'} required/>
         <p className='mt-3 forget-password' onClick={() => navigate('/forgetpage')}>Parolni unutdingizmi?</p>
-        <p className='error' style={{ color:`${error === 'tizimga kirdingiz' ? 'green' : 'red'}`}}>{error}</p>
+        <p className='error text-danger'>{error}</p>
         <button className='btn btn-primary w-100' onClick={signIn}>Kirish</button>
         <p className='mt-3'>Accountingiz mavjud emasmi? <span className='sign-up' onClick={() => navigate('/register-page')}>Ro‘yxatdan o‘tish</span></p>
     </div>
